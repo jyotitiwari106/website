@@ -23,7 +23,7 @@ const AboutProgressSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="lg:p-2 p-4 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}

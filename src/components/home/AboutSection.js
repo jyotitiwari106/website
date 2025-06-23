@@ -5,8 +5,8 @@ import about1 from '../../assets/TECW0009.jpg'
 import about2 from '../../assets/images/TECW0008.jpg'
 const AboutSection = () => {
   return (
-    <section className="py-20">
-      <div className="container mx-auto">
+    <section className="container py-10 p-8">
+      <div className=" mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
      
          
@@ -76,7 +76,7 @@ const AboutSection = () => {
   </div>
 
   {/* Positioned image on top of about1 */}
-  <div className="absolute mt-10 top-1/2 left-[45%] -translate-x-[60%] -translate-y-1/2 bg-white rounded-lg p-4 shadow-xl max-w-none">
+  <div className="absolute mt-10 top-1/2  md:inline hidden left-[45%] -translate-x-[60%] -translate-y-1/2 bg-white rounded-lg p-4 shadow-xl max-w-none">
   <img src={about2} alt='' className="w-[600px] h-[320px] " />
   <div className="flex items-center space-x-4">
     {/* Additional content */}

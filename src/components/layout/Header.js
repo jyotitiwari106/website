@@ -22,20 +22,20 @@ const Header = () => {
 
   return (
     <header className={`fixed w-full z-50 shadow-lg  top-0 left-0  transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg p-5' : 'bg-white p-5 '
+      scrolled ? 'bg-white shadow-lg p-2' : 'bg-white p-2 '
     }`}>
       <div className="container mx-auto flex justify-between items-center">
         <p className=" items-center">
-          <Link to="/" className="flex gap-2 text-3xl font-bold text-primary">
-           <img src={logo} alt='' className=' h-24 w-24'></img>
-          <h1 className='flex-col flex justify-center items-center'> SkillForge <h1>Technologies</h1></h1>
+          <Link to="/" className="flex gap-1 text-xl font-bold text-primary">
+           <img src={logo} alt='' className=' h-16 w-16'/>
+          <p className='flex-col flex justify-center items-center'> SkillForge <p>Technologies</p></p>
           </Link>
            
         </p>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex text-xl font-bold gap-8">
-          <Link to="/" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700"><h2>Home</h2></Link>
+        <nav className="hidden lg:flex text-lg !font-bold gap-8">
+          <Link to="/" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Home</Link>
           <Link to="/about" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">About</Link>
           <Link to="/services" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Services</Link>
           <Link to="/team" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Team</Link>
@@ -43,9 +43,12 @@ const Header = () => {
           <Link to="/blog" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Blog</Link>
           <Link to="/contact" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Contact</Link>
         </nav>
-
-        <div className="flex  hidden lg:flex items-center  ">
-          <button className="flex btn-12 p-4 !text-2xl !gap-3"><span className='flex !gap-3'> <FaSearch className='flex justify-center items-center mt-2' />Get A Quote</span></button>
+  {/*  <button className="flex bg-linear-to-t from-sky-500 to-indigo-500 p-2 !text-xl "> <span className='flex !gap-3'> <FaSearch className='flex justify-center items-center mt-2' />Get A Quote</span></button>*/} 
+       <div className=' flex justify-center items-center mt-3 '>
+        <button type="button" className="flex justify-center items-center  text-white bg-gradient-to-br from-sky-500 to-blue-600  hover:bg-gradient-to-bl focus:ring-5 focus:outline-none lg:h-12 focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg font-bold text-sm px-5 py-2.5 text-center me-2 mb-2">GET STARTED</button>
+      
+      </div>  <div className="flex hidden lg:flex items-center  ">
+        
           <Link to="/contact" className="btn btn-secondary rounded-md text-xl"></Link>
         </div>
 
@@ -115,7 +118,7 @@ const Header = () => {
 
               <Link 
                 to="/contact"
-                className="btn btn-secondary rounded-md inline-block w-max"
+                className="btn btn-secondary rounded-md inline-block "
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get A Quote

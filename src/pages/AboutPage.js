@@ -11,8 +11,9 @@ import bg from '../assets/About/page-banner.jpg';
 const AboutPage = () => {
   return (
     <div className='relative'>
-      <img src={bg} alt=''className='pt/-20'/>
-      <p className='absolute'>About Us </p>
+      <img src={bg} alt=''className='pt-20 relative'/>
+      <div className='absolute inset-0 text-black flex justify-center items-center'>
+        <p className='flex justify-center items-center absolute inset-0'>About Us</p> </div>
      
    <div className="pt-16 md:pt-20 lg:pt-24">
      <div className='z-50'>

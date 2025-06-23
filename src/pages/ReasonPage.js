@@ -64,7 +64,7 @@ const Services = [
 const ReasonPage = () => {
   return (
     <section
-      className="relative bg-fixed bg-center bg-cover"
+      className="relative bg-fixed bg-center bg-cover md:p-2 p-4"
       style={{ backgroundImage: `url(${img2})` }}
     >
       {/* Overlay for dim effect */}
@@ -80,42 +80,44 @@ const ReasonPage = () => {
           </p>
         </div>
         <div className='flex justify-center items-center'>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:w-[80%] justify-center items-center">
-            {Services.map((service) => (
-              <div
-                key={service.id}
-                className="bg-gray-200 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow group"
-              >
-                <div className="bg-primary bg-opacity-10 text-blue-600 w-20 h-20 rounded-lg flex items-center justify-center mb-6 hover:bg-secondary hover:bg-opacity-10 transition-colors">
-                  <div className="transition-transform duration-500 hover:rotate-180">
-                    {service.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray mb-6">{service.description}</p>
-                <Link
-                  to={service.link}
-                  className="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors text-blue-600"
-                >
-                  Learn More
-                  <svg
-                    className="ml-2 w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
+         <div className='flex justify-center items-center'>
+                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:w-[80%] justify-center items-center">
+                   {Services.map((service) => (
+                     <div
+                       key={service.id}
+                       className="bg-slate-300 bg-opacity-90 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow group"
+                     >
+                       <div className="bg-primary bg-opacity-10  text-blue-600 w-20 h-20  rounded-lg flex items-center justify-center mb-6 hover:bg-secondary hover:bg-opacity-10 transition-colors">
+           <div className="transition-transform duration-500 hover:rotate-180 ">
+             {service.icon}
+           </div>
+         </div>
+                       <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                       <p className="text-gray mb-6">{service.description}</p>
+                       <Link
+                         to={service.link}
+                         className="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors text-blue-600"
+                       >
+                         Learn More
+                         <svg
+                           className="ml-2 w-5 h-5"
+                           fill="none"
+                           stroke="currentColor"
+                           viewBox="0 0 24 24"
+                           xmlns="http://www.w3.org/2000/svg"
+                         >
+                           <path
+                             strokeLinecap="round"
+                             strokeLinejoin="round"
+                             strokeWidth="2"
+                             d="M14 5l7 7m0 0l-7 7m7-7H3"
+                           ></path>
+                         </svg>
+                       </Link>
+                     </div>
+                   ))}
+                 </div>
+                 </div>
         </div>
       </div>
     </section>

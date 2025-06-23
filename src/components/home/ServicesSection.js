@@ -52,7 +52,7 @@ const serviceItems = [
 const ServicesSection = () => {
   return (
     <section
-      className="relative bg-fixed bg-center bg-cover"
+      className="relative bg-fixed bg-center bg-cover md:p-2 p-4"
       style={{ backgroundImage: `url(${img2})` }}
     >
       {/* Overlay for darkening the background if needed */}
@@ -60,7 +60,7 @@ const ServicesSection = () => {
 
       <div className="relative z-10 py-20 container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-secondary font-bold text-2xl text-blue-900 tracking-widest">OUR SERVICES</span>
+          <span className="text-secondary font-bold text-2xl text-blue-900 tracking-widest">OUR PROJECT</span>
           <h2 className="text-4xl text-black font-bold mt-2 mb-4">We Provide Best IT Solutions</h2>
           <p className="text-black font-bold  text-xl">
             Our comprehensive range of IT services is designed to help your business thrive in the digital landscape.

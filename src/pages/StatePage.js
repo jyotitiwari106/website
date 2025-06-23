@@ -5,7 +5,7 @@ const StatePage = () => {
   return (
     <div className="w-[90%] mx-auto my-16 ">
       <div
-        className="grid grid-cols-1 md:grid-cols-4 text-white h-48 items-center text-center rounded-2xl overflow-hidden"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-white lg:h-48 items-center text-center rounded-2xl overflow-hidden"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: 'cover',

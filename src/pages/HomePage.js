@@ -8,6 +8,7 @@ import TeamSection from '../components/home/TeamSection';
 import BlogSection from '../components/home/BlogSection';
 import AboutProgressSection from '../components/home/AboutProgressSection';
 import ReasonSection from '../components/home/ReasonSection';
+import Accordion from '../components/home/Faq';
 
 const HomePage = () => {
   return (
@@ -17,9 +18,10 @@ const HomePage = () => {
       <ServicesSection />
       <TeamSection />
       <ReasonSection />
-      <AboutProgressSection />
+    { /* <AboutProgressSection /> */}
       <TestimonialsSection />
       <BlogSection />
+      <Accordion/>
  
     </div>
   );

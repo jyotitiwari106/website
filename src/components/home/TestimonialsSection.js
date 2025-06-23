@@ -54,8 +54,8 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-light">
-      <div className="container mx-auto">
+    <section className="py-20 bg-light ">
+      <div className="container mx-auto  overflow-hidden">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-secondary text-blue-700 font-bold tracking-widest text-xl">TESTIMONIAL</span>
           <h2 className="text-4xl font-bold mt-2 mb-4">What Our Clients Say</h2>
@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
 
         <Slider {...settings}>
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="p-4">
+            <div key={testimonial.id} className="p-8">
               <div className="bg-white p-8 rounded-lg shadow-md relative h-full">
                 <div className="absolute top-6 right-6 text-secondary opacity-20">
                   <FaQuoteRight size={40} />

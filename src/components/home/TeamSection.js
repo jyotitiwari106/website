@@ -69,8 +69,8 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gray-50  overflow-hidden">
+      <div className="container mx-auto px-4 o overflow-hidden">
         <div className="text-center mb-16">
           <p className="text-blue-600 font-semibold mb-2">OUR EXPERT TEAM</p>
           <h2 className="text-4xl md:text-5xl font-bold">We have world expert team</h2>
