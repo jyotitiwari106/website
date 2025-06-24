@@ -39,7 +39,7 @@ const Footer = () => {
 
       {/* Footer Main Section */}
       <footer
-        className=" !absolute z-10 py-12 bg-cover bg-center bg-no-repeat w-full overflow-hidden"
+        className="py-12 bg-cover bg-center bg-no-repeat w-full overflow-hidden"
         style={{ backgroundImage: `url(${footer})` }}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-10">
@@ -107,10 +107,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
+         
       </footer>
 
       {/* Copyright */}
-      <div className="bg-[#040816] py-4">
+      <hr className='w-[80%]'/>
+     <div className="bg-[#040816] py-4">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-400 text-sm">
           © Copyrights {new Date().getFullYear()} SkillForge Technologies. All rights reserved.
         </div>

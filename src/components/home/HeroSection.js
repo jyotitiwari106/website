@@ -58,7 +58,7 @@
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent z-10" />
 
           {/* Content */}
-          <div className="relative z-20 flex flex-col justify-center px-4 md:px-[10%] text-white h-full">
+          <div className="relative z-20 flex flex-col pt-56 px-4 md:px-[10%] text-white h-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -11,7 +11,7 @@ import bg from '../assets/About/page-banner.jpg';
 const AboutPage = () => {
   return (
     <div className='relative'>
-      <img src={bg} alt=''className='pt-20 relative'/>
+      <img src={bg} alt=''className='inset-0 w-full h-full object-cover pt-20 transform hover:scale-105 !h-[500px] transition-transform duration-3000 '/>
       <div className='absolute inset-0 text-black flex justify-center items-center'>
         <p className='flex justify-center items-center absolute inset-0'>About Us</p> </div>
      
