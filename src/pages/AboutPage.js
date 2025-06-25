@@ -11,11 +11,14 @@ import bg from '../assets/About/page-banner.jpg';
 const AboutPage = () => {
   return (
     <div className='relative'>
-      <img src={bg} alt=''className='inset-0 w-full h-full object-cover pt-20 transform hover:scale-105 !h-[500px] transition-transform duration-3000 '/>
-      <div className='absolute inset-0 text-black flex justify-center items-center'>
-        <p className='flex justify-center items-center absolute inset-0'>About Us</p> </div>
-     
-   <div className="pt-16 md:pt-20 lg:pt-24">
+      <div className="relative h-[550px]">
+      <img src={bg} alt=''className='inset-0 w-full h-full object-cover pt-20 transform hover:scale-105 transition-transform duration-3000 '/>
+      
+      <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">About Us</h1>
+        </div>
+        </div>
+   <div className="pt-16 md:pt-20 lg:pt-16">
      <div className='z-50'>
       <Mission/>
       <StatePage/>

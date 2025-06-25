@@ -38,8 +38,8 @@ const Header = () => {
           <Link to="/" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Home</Link>
           <Link to="/about" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">About</Link>
           <Link to="/services" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Services</Link>
-          <Link to="/team" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Team</Link>
-          <Link to="/case-studies" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Case Studies</Link>
+       {/*   <Link to="/team" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Team</Link> */}
+          <Link to="/case-studies" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Career</Link>
           <Link to="/blog" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Blog</Link>
           <Link to="/contact" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Contact</Link>
         </nav>

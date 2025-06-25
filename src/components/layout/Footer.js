@@ -111,8 +111,8 @@ const Footer = () => {
       </footer>
 
       {/* Copyright */}
-      <hr className='w-[80%]'/>
-     <div className="bg-[#040816] py-4">
+      <hr className='w-[80%] '/>
+     <div className="bg-[#040816] py-6">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-400 text-sm">
           © Copyrights {new Date().getFullYear()} SkillForge Technologies. All rights reserved.
         </div>
@@ -120,5 +120,5 @@ const Footer = () => {
     </div>
   );
 };
-
+ 
 export default Footer;

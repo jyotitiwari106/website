@@ -32,16 +32,16 @@ const Mission = () => {
             Inner “flex” to hold two images side‐by‐side on md+ 
             and stacked on smaller screens 
           */}
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+          <div className="flex md:gap-6 justify-center items-center">
             <img
               src={teamImage}
               alt="Team working"
-              className="rounded-xl w-full md:w-1/2 object-cover max-h-[80vh] pb-20"
+              className="rounded-xl :w-1/2 object-cover md:max-h-[80vh] md:pb-20"
             />
             <img
               src={freelancerImage}
               alt="Freelancer working"
-              className="rounded-xl w-full md:w-1/2 object-cover max-h-[80vh] pt-20"
+              className="rounded-xl  w-1/2 object-cover md:max-h-[80vh] md:pt-20"
             />
           </div>
         </div>
