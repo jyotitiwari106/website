@@ -11,7 +11,7 @@ const ContactSection = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white">Contact Us</h1>
         </div>
         </div>
-      <div className="container mx-auto">
+      <div className="!container ">
         
         <div className="text-center max-w-2xl mx-auto mb-16">
           
@@ -20,8 +20,8 @@ const ContactSection = () => {
             Have questions or need assistance? Our team is here to help. Reach out to us through any of the channels below.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+           <div className=' flex justify-center items-center'>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-[80%]">
           {/* Phone */}
           <div className="bg-white p-8 rounded-lg  shadow-md text-center border-2">
             <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -58,7 +58,7 @@ const ContactSection = () => {
             </address>
           </div>
         </div>
-
+</div>
        <div className="relative mt-16 bg-white rounded-lg overflow-hidden">
   {/* Background Image
   <img
