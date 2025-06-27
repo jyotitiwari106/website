@@ -23,7 +23,7 @@ const ServicesPage = () => {
       {/* Project Component Centered */}
       <div className="w-full max-w-7xl px-4">
         <Project />
-        <PricingCard/>
+       
       </div>
     </div>
   );
