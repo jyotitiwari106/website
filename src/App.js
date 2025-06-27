@@ -19,6 +19,7 @@ import './index.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CareerPage from './pages/CareerPage';
+import BlogDetailsPage from './pages/BlogDetailsPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/sitemap" element={<SitemapPage />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+            <Route path='/blogdetails' element={<BlogDetailsPage/>}></Route>
           </Routes>
         </main>
         <Footer />

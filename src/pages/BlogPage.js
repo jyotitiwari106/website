@@ -1,99 +1,59 @@
+// BlogSection.js
 import React from 'react';
-import Layout from '../components/layout/Layout';
+import BlogCard from './BlogCard';
+import img1 from '../assets/blog/blog-1.jpg';
+import img2 from '../assets/blog/blog-2.jpg';
+import img3 from '../assets/blog/blog-3.jpg';
 
 const BlogPage = () => {
-  const blogPosts = [
+  const blogData = [
     {
-      id: 1,
-      title: '10 Ways to Improve Your Cybersecurity Posture',
-      author: 'Sarah Johnson',
-      date: 'June 15, 2023',
-      category: 'Cyber Security',
-      image: 'https://via.placeholder.com/800x500',
-      excerpt: 'In today\'s digital landscape, cybersecurity threats are evolving faster than ever. Learn how to protect your business with these essential strategies.'
+      image: img1,
+      date: '08',
+      month: 'Aug',
+      title: 'How to become a successful businessman',
     },
     {
-      id: 2,
-      title: 'The Benefits of Cloud Migration for Small Businesses',
-      author: 'Michael Chen',
-      date: 'May 28, 2023',
-      category: 'Cloud Services',
-      image: 'https://via.placeholder.com/800x500',
-      excerpt: 'Moving your operations to the cloud offers numerous advantages for small businesses, from cost savings to improved scalability.'
+      image: img2,
+      date: '10',
+      month: 'Aug',
+      title: 'Who Needs Extract Value From Data?',
     },
     {
-      id: 3,
-      title: 'Web Development Trends to Watch in 2023',
-      author: 'Alex Rodriguez',
-      date: 'May 12, 2023',
-      category: 'Web Development',
-      image: 'https://via.placeholder.com/800x500',
-      excerpt: 'From AI-powered interfaces to WebAssembly, discover the latest trends that are shaping the future of web development.'
+      image: img3,
+      date: '12',
+      month: 'Aug',
+      title: 'Easy and Most Powerful Server and Platform.',
+    },
+    
+      {image: img1,
+      date: '08',
+      month: 'Aug',
+      title: 'How to become a successful businessman',
     },
     {
-      id: 4,
-      title: 'How Data Analytics Can Transform Your Business',
-      author: 'Emily Zhang',
-      date: 'April 30, 2023',
-      category: 'Data Analytics',
-      image: 'https://via.placeholder.com/800x500',
-      excerpt: 'Leverage the power of data analytics to gain valuable insights, make informed decisions, and drive business growth.'
+      image: img2,
+      date: '10',
+      month: 'Aug',
+      title: 'Who Needs Extract Value From Data?',
     },
     {
-      id: 5,
-      title: 'Mobile App Development: Native vs. Cross-Platform',
-      author: 'David Wilson',
-      date: 'April 18, 2023',
-      category: 'App Development',
-      image: 'https://via.placeholder.com/800x500',
-      excerpt: 'Trying to decide between native and cross-platform development for your mobile app? This comparison will help you make the right choice.'
+      image: img3,
+      date: '12',
+      month: 'Aug',
+      title: 'Easy and Most Powerful Server and Platform.',
     },
-    {
-      id: 6,
-      title: 'IT Consulting: When and Why Your Business Needs It',
-      author: 'Jennifer Moore',
-      date: 'April 5, 2023',
-      category: 'IT Consulting',
-      image: 'https://via.placeholder.com/800x500',
-      excerpt: 'Professional IT consulting services can help your business overcome technical challenges and achieve strategic goals.'
-    }
   ];
 
   return (
-
-      <div className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4">Latest News & Insights</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay updated with our latest articles, insights, and news about technology and business innovation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <span className="text-secondary font-medium text-sm mb-2 block">{post.category}</span>
-                  <h3 className="text-xl font-bold mb-3 hover:text-secondary transition-colors cursor-pointer">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-500 text-sm">{post.date}</span>
-                    <button className="text-primary font-medium hover:text-secondary transition-colors">
-                      Read More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className="flex justify-center items-center pt-28 container px-4 py-10">
+      <div className="grid md:grid-cols-3 gap-8  max-w-7xl">
+        {blogData.map((blog, index) => (
+          <BlogCard key={index} {...blog} />
+        ))}
       </div>
-
+    </div>
   );
 };
 
-export default BlogPage; 
+export default BlogPage;

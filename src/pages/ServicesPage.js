@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bg from '../assets/About/page-banner.jpg';
 import Project from './project';
 import PricingCard from './PricingCard';
 
 const ServicesPage = () => {
+     const [selectedJob, setSelectedJob] = useState(null);
+  
   return (
     <div className="flex flex-col items-center">
       {/* Banner Section */}
