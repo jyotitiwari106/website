@@ -6,15 +6,12 @@ import about2 from '../../assets/images/TECW0008.jpg'
 const AboutSection = () => {
   return (
     <section className="container py-10 p-8">
-      <div className=" mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-     
-         
-
+      <div className="container flex justify-center items-center mx-auto">
+        <div className=" container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div>
+          <div className='flex flex-col justify-center px-32'>
             <span className="text-secondary text-blue-700 font-bold tracking-widest text-xl">WHO WE ARE</span>
-            <h2 className="text-6xl font-bold mt-2 mb-6 w-[100%]">Highly Tailored IT Design, Management & Support Services</h2>
+            <h2 className="text-4xl font-bold mt-2 mb-6">Highly Tailored IT Design, Management & Support Services</h2>
             <p className="text-xl mb-6 w-[80%] text-gray-600">
             Accelerate innovation with world-class tech teams We’ll match you to an entire remote team of incredible freelance talent for all your software development needs.
             </p>
