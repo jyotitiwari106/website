@@ -6,13 +6,15 @@ import {
   FaFacebookF,
   FaTwitter,
   FaPinterest,
+  FaSearch,
 } from "react-icons/fa";
 import img from "../assets/blog/blog-1.jpg";
 import bd from "../assets/blog/bd.png";
 import bd2 from "../assets/blog/image.png";
+import blog from '../assets/blog/sidebar-img.jpg'
 const BlogDetailsPage = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-28 grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <div className="max-w-7xl mx-auto px-4 py-5 pt-28 grid grid-cols-1 lg:grid-cols-3 gap-20">
       {/* Main Content */}
       <div className="lg:col-span-2">
         {/* Blog Banner */}
@@ -176,24 +178,83 @@ const BlogDetailsPage = () => {
       </div>
 
       {/* Sidebar */}
-      <div className="space-y-6">
-        <h2 className="text-xl font-bold mb-4">Popular Posts</h2>
-        {[1, 2, 3].map((item, index) => (
-          <div key={index} className="flex items-center gap-4">
-            <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              alt="Post"
-              className="w-16 h-16 rounded-full object-cover"
-            />
-            <div>
-              <p className="text-sm font-semibold">
-                How Wireless Technology is Changing Business
-              </p>
-              <p className="text-xs text-gray-500">May 15, 2020</p>
-            </div>
-          </div>
-        ))}
+    
+   <div className="space-y-6">
+  {/* Search Box with Icon */}
+  <div className="relative  mx-auto">
+    <input
+      type="text"
+      placeholder="Write your keyword..."
+      className="w-full bg-gray-100 p-3 pr-12 rounded-md outline-none focus:ring-2 shadow-xl border-4 ring-gray-500"
+    />
+    <FaSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
+  </div>
+
+  <h2 className="text-xl font-bold mb-4">Popular Posts</h2>
+
+  {[1, 2, 3].map((item, index) => (
+    <div key={index} className="flex items-center gap-4 p-4">
+      <img
+        src="https://randomuser.me/api/portraits/men/32.jpg"
+        alt="Post"
+        className="w-16 h-16 rounded-full object-cover"
+      />
+      <div>
+        <p className="text-sm font-semibold">
+          How Wireless Technology is Changing Business
+        </p>
+        <p className="text-xs text-gray-500">May 15, 2020</p>
       </div>
+      <hr/>
+    </div>
+  ))}
+
+  <div className="relative pt-10 gap-10 flex flex-col justify-center items-center p-2">
+    <img src={blog} alt="" />
+    <div className="gap-5 absolute flex flex-col p-6">
+      <p className="text-4xl max-w-2xl text-white font-bold">The<br />leading<br />platform</p>
+      <button
+        type="button"
+        className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-bold rounded-lg text-sm px-16 py-3.5 text-center me-2 mb-2"
+      >
+        Get Started
+      </button>
+    </div>
+  </div>
+
+  <div className="flex flex-col px-8 gap-5">
+    <div className="text-2xl font-bold">Categories</div>
+    <div className="text-sm flex font-bold">Technology</div>
+       <div className="text-sm flex font-bold"> Innovation </div>
+          <div className="text-sm flex font-bold"> Learning </div>
+          <div className="text-sm flex font-bold"> Information  </div>
+  </div>
+   <div className="flex flex-col px-8 gap-5">
+     <div className="text-2xl font-bold">Tags</div>
+      <div className="flex flex-wrap gap-4">
+                <span className="bg-gray-100 px-3 py-1 rounded-md text-sm">
+                  Learning 
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-md text-sm">
+                  Courses
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-md text-sm">
+                 Business
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-md text-sm">
+                 Udemy
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-md text-sm">
+                  Online
+                </span>
+                <span className="bg-gray-100 px-3 py-1 rounded-md text-sm">
+                Technology
+                </span>
+              </div>
+   </div>
+</div>
+
+
     </div>
   );
 };

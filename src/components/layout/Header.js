@@ -24,15 +24,15 @@ const Header = () => {
     <header className={`fixed w-full z-50 shadow-lg  top-0 left-0  transition-all duration-300 ${
       scrolled ? 'bg-white shadow-lg p-2' : 'bg-white p-2 '
     }`}>
-      <div className="container mx-auto flex justify-between items-center">
-        <p className=" items-center">
+      <div className="container mx-auto justify-between grid-cols-3  grid items-center">
+        <p className=" items-center flex justify-center items-center">
           <Link to="/" className="flex gap-1 text-xl font-bold text-primary">
            <img src={logo} alt='' className=' h-16 w-16'/>
           <p className='flex-col flex justify-center items-center'> SkillForge <p>Technologies</p></p>
           </Link>
            
         </p>
-
+ 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex text-lg !font-bold gap-8"> 
           <Link to="/" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Home</Link>
