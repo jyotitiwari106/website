@@ -86,7 +86,7 @@
 
         {/* Apply Modal */}
         {selectedJob && ( 
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center md:p-0 p-4">
+          <div className="fixed inset-0 bg-black bg-opacity-50 md:z-50 z-20 flex items-center justify-center md:p-0 p-4">
             <div className="bg-white w-full max-w-md p-6 rounded shadow-lg relative">
               <button
                 onClick={() => setSelectedJob(null)}

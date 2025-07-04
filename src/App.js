@@ -20,6 +20,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CareerPage from './pages/CareerPage';
 import BlogDetailsPage from './pages/BlogDetailsPage';
+import Client from './components/About/Client.js';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/sitemap" element={<SitemapPage />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
             <Route path='/blogdetails' element={<BlogDetailsPage/>}></Route>
+            <Route path='/client' element={<Client/>}></Route>
           </Routes>
         </main>
         <Footer />

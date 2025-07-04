@@ -6,56 +6,42 @@ import bg from '../assets/mission/about-shape2.png';
 const Mission = () => {
   return (
     <section className="w-full py-16 bg-white">
-      {/* 
-        1) container + mx-auto: This wraps your two‐column layout 
-           and keeps it centered in the viewport. 
-        2) px-4 md:px-16: horizontal padding so it doesn't touch the edges on small screens.
-      */}
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-4 md:px-16">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-4 md:px-10">
         
-        {/* ─── LEFT SIDE: Images ─────────────────────────────── */}
-        {/* 
-            - w-full lg:w-1/2: take full width on mobile, half on lg+ 
-            - flex justify-center items-center: center the inner images themselves 
-            - relative + backgroundImage: put your “shape” behind the images 
-        */}
+        {/* ─── LEFT SIDE: Images ───────────────────── */}
         <div
           className="relative w-full lg:w-1/2 flex justify-center items-center"
           style={{
             backgroundImage: `url(${bg})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
           }}
         >
-          {/* 
-            Inner “flex” to hold two images side‐by‐side on md+ 
-            and stacked on smaller screens 
-          */}
-          <div className="flex md:gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
             <img
               src={teamImage}
               alt="Team working"
-              className="rounded-xl :w-1/2 object-cover md:max-h-[80vh] md:pb-20"
+              className="rounded-xl w-full sm:w-1/2 object-cover max-h-[350px]"
             />
             <img
               src={freelancerImage}
               alt="Freelancer working"
-              className="rounded-xl  w-1/2 object-cover md:max-h-[80vh] md:pt-20"
+              className="rounded-xl w-full sm:w-1/2 object-cover max-h-[350px]"
             />
           </div>
         </div>
 
-        {/* ─── RIGHT SIDE: Text Content ──────────────────────── */}
+        {/* ─── RIGHT SIDE: Text ────────────────────── */}
         <div className="w-full lg:w-1/2">
-          <p className="text-blue-600 font-semibold uppercase mb-3 tracking-wide">
+          <p className="text-blue-600 font-semibold uppercase mb-3 tracking-wide text-sm sm:text-base">
             Who We Are
           </p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-snug">
             Highly Tailored IT Design, <br />
             Management & Support Services.
           </h2>
-          <p className="text-gray-600 mb-8 text-lg">
+          <p className="text-gray-600 mb-8 text-base sm:text-lg leading-relaxed">
             Accelerate innovation with world-class tech teams. We’ll match you to an
             entire remote team of incredible freelance talent for all your software
             development needs.
@@ -63,23 +49,23 @@ const Mission = () => {
 
           {/* Bottom Cards */}
           <div className="flex flex-col md:flex-row gap-6">
-            <div>
+            <div className="w-full md:w-1/2">
               <h4 className="text-lg font-bold text-gray-900 mb-2">Our Mission</h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Accelerate innovation with world-class tech teams. We help
                 businesses elevate their value.
               </p>
             </div>
-            <div>
+            <div className="w-full md:w-1/2">
               <h4 className="text-lg font-bold text-gray-900 mb-2">Custom Code</h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Accelerate innovation with world-class tech teams. We help
                 businesses elevate their value.
               </p>
             </div>
           </div>
         </div>
-
+        
       </div>
     </section>
   );

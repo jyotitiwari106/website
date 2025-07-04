@@ -1,134 +1,81 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
-import logo from './../../assets/images/logo.png'
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from './../../assets/images/logo.png';
 import '../../App.css';
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 shadow-lg  top-0 left-0  transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg p-2' : 'bg-white p-2 '
-    }`}>
-      <div className="container mx-auto justify-between grid-cols-3  grid items-center">
-        <p className=" items-center flex justify-center items-center">
-          <Link to="/" className="flex gap-1 text-xl font-bold text-primary">
-           <img src={logo} alt='' className=' h-16 w-16'/>
-          <p className='flex-col flex justify-center items-center'> SkillForge <p>Technologies</p></p>
-          </Link>
-           
-        </p>
- 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex text-lg !font-bold gap-8"> 
-          <Link to="/" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Home</Link>
-          <Link to="/about" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">About</Link>
-          <Link to="/services" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Services</Link>
-       {/*   <Link to="/team" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Team</Link> */}
-          <Link to="/career" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Career</Link>
-          <Link to="/blog" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Blog</Link>
-          <Link to="/contact" className="font-medium text-dark hover:text-secondary transition-colors hover:text-blue-700">Contact</Link>
+    <header className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg p-2' : 'bg-white p-2'}`}>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Logo" className="h-12 w-12" />
+          <div className="leading-tight text-primary font-bold text-lg md:text-xl">
+            SkillForge <br />
+            <span className="text-sm md:text-base">Technologies</span>
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden lg:flex items-center gap-6 text-lg font-semibold">
+          <Link to="/" className="hover:text-blue-700 text-gray-800">Home</Link>
+          <Link to="/about" className="hover:text-blue-700 text-gray-800">About</Link>
+          <Link to="/services" className="hover:text-blue-700 text-gray-800">Services</Link>
+          <Link to="/career" className="hover:text-blue-700 text-gray-800">Career</Link>
+          <Link to="/blog" className="hover:text-blue-700 text-gray-800">Blog</Link>
+          <Link to="/contact" className="hover:text-blue-700 text-gray-800">Contact</Link>
         </nav>
-  {/*  <button className="flex bg-linear-to-t from-sky-500 to-indigo-500 p-2 !text-xl "> <span className='flex !gap-3'> <FaSearch className='flex justify-center items-center mt-2' />Get A Quote</span></button>*/} 
-       <div className=' flex justify-center items-center mt-3 '>
-        <button type="button" className="flex justify-center items-center  text-white bg-gradient-to-br from-sky-500 to-blue-600  hover:bg-gradient-to-bl focus:ring-5 focus:outline-none lg:h-12 focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg font-bold text-sm px-5 py-2.5 text-center me-2 mb-2">GET STARTED</button>
-      
-      </div>  <div className="flex hidden lg:flex items-center  ">
-        
-          <Link to="/contact" className="btn btn-secondary rounded-md text-xl"></Link>
+
+        {/* CTA Button */}
+        <div className="hidden lg:flex">
+          <Link to="/contact">
+            <button className="text-white bg-gradient-to-br from-sky-500 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg font-semibold text-sm px-5 py-2.5">
+              GET STARTED
+            </button>
+          </Link>
         </div>
 
-        {/* Mobile menu button */}
-        <button 
-          className="lg:hidden text-dark text-2xl"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Mobile Menu Toggle */}
+        <div className="lg:hidden">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-2xl text-gray-800">
+            {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white w-full py-4 shadow-lg">
-          <div className="container mx-auto">
-            <nav className="flex flex-col space-y-4">
-              <Link 
-                to="/" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link 
-                to="/about" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
-                to="/services" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link 
-                to="/team" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Team
-              </Link>
-              <Link 
-                to="/case-studies" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Case Studies
-              </Link>
-              <Link 
-                to="/blog" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link 
-                to="/contact" 
-                className="font-medium text-dark hover:text-secondary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-
-              <Link 
-                to="/contact"
-                className="btn btn-secondary rounded-md inline-block "
-                onClick={() => setMobileMenuOpen(false)}
-              >
+        <div className="lg:hidden bg-white w-full py-6 shadow-lg mt-2">
+          <nav className="flex flex-col space-y-4 px-6 text-base font-medium">
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Home</Link>
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">About</Link>
+            <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Services</Link>
+            <Link to="/team" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Team</Link>
+            <Link to="/career" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Career</Link>
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Blog</Link>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Contact</Link>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+              <button className="mt-2 text-white w-full bg-gradient-to-br from-sky-500 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg font-semibold text-sm px-5 py-2.5">
                 Get A Quote
-              </Link>
-            </nav>
-          </div>
+              </button>
+            </Link>
+          </nav>
         </div>
       )}
     </header>
   );
 };
 
-export default Header; 
+export default Header;

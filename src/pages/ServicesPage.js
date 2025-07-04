@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import bg from '../assets/About/page-banner.jpg';
 import Project from './project';
 import PricingCard from './PricingCard';
-import TopServicesSection from '../components/Services.js';
-import FeaturesTabs from '../components/Services.js/Featurestabs.js';
+
+import FeaturesTabs from '../components/Services/Featurestabs.js';
+
+import TopServicesSection from '../components/Services/Topservices.js';
 
 const ServicesPage = () => {
      const [selectedJob, setSelectedJob] = useState(null);
@@ -11,7 +13,7 @@ const ServicesPage = () => {
   return (
     <div className="flex flex-col items-center">
       {/* Banner Section */}
-     <TopServicesSection/>
+    <TopServicesSection/>
  <FeaturesTabs/>
       {/* Project Component Centered */}
       <div className="w-full max-w-7xl px-4">

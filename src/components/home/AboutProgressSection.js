@@ -23,9 +23,9 @@ const AboutProgressSection = () => {
   ];
 
   return (
-    <section className="lg:p-2 p-4 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="lg:p-2 p-4 flex flex-col justify-center items-center px-4 !w-[90%] bg-white">
+      <div className="!container px-4 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
           {/* Left Column */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
