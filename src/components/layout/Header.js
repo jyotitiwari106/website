@@ -20,11 +20,13 @@ const Header = () => {
     <header className={`fixed w-full z-50 top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg p-2' : 'bg-white p-2'}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Logo" className="h-12 w-12" />
-          <div className="leading-tight text-primary font-bold text-lg md:text-xl">
-            SkillForge <br />
+        <Link to="/" className="flex items-center gap-1">
+          <img src={logo} alt="Logo" className="h-14 w-14" />
+          <div className='flex flex-col'>
+          <div className="leading-tight text-primary font-bold text-sm md:text-base">
+            <p>SkillForge </p>
             <span className="text-sm md:text-base">Technologies</span>
+          </div>
           </div>
         </Link>
 
@@ -62,7 +64,6 @@ const Header = () => {
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Home</Link>
             <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">About</Link>
             <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Services</Link>
-            <Link to="/team" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Team</Link>
             <Link to="/career" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Career</Link>
             <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Blog</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-gray-800 hover:text-blue-600">Contact</Link>
