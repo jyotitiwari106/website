@@ -15,8 +15,8 @@ const ContactSection = () => {
         
         <div className="text-center max-w-2xl mx-auto mb-16">
           
-          <h2 className="text-4xl font-bold mt-5 mb-4">Get In Touch With Us</h2>
-          <p className="text-gray">
+          <h2 className="text-4xl font-bold mt-5 mb-4 p-2">Get In Touch With Us</h2>
+          <p className="text-gray p-4">
             Have questions or need assistance? Our team is here to help. Reach out to us through any of the channels below.
           </p>
         </div>
