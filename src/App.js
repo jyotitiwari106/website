@@ -20,13 +20,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CareerPage from './pages/CareerPage';
 import BlogDetailsPage from './pages/BlogDetailsPage';
-import Client from './components/About/Client.js';
+import Client from './components/About/Client';
+import SummerTraining from './components/Training/SummerTraining';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Header />
+         <ScrollToTop />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -42,6 +45,7 @@ function App() {
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
             <Route path='/blogdetails' element={<BlogDetailsPage/>}></Route>
             <Route path='/client' element={<Client/>}></Route>
+            <Route path='/summertraining' element={<SummerTraining/>}/>
           </Routes>
         </main>
         <Footer />
